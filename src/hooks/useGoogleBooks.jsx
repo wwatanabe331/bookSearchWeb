@@ -1,7 +1,8 @@
 // src/hooks/useGoogleBooks.jsx
 import { useState } from "react";
-import { my_api_key } from "./myAPI_key";
+// import { my_api_key } from "./myAPI_key";
 
+const my_api_key = import.meta.env.VITE_GOOGLE_BOOKS_API_KEY;
 export const useGoogleBooks = () => {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
